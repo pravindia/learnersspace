@@ -166,6 +166,9 @@ Other options you could explore in your life, than normal Study is, you can lear
                             <button id="submit"class="btn btn-primary">Submit</button>
                         
                     </form>
+                <div id="hidden_div">
+                    <h5>Hurray ! You are In <br> Our Team will Contact you shortly ! </h5>
+                </div>
             </div>
         </div>
     </div>
@@ -260,9 +263,9 @@ Other options you could explore in your life, than normal Study is, you can lear
     <script>
         //Script to Trigger the Ajax Function
         $(document).ready(function () {
-            
+            $("#hidden_div").hide();
             $("#submit").click(function(e) {
-                alert("Clicked");
+              
                 e.preventDefault();
 
                 var stud_name = $('#student_name').val();
@@ -287,9 +290,10 @@ Other options you could explore in your life, than normal Study is, you can lear
                             setTimeout(function () {
 
                                // $('.status').html(json_data.msg);
-                                $('#submit').html('Done');
-                                location.reload();
-                                alert("Data Added !");
+                                $('#student_lead_form').hide();
+                                $('#hidden_div').show();
+                               
+                               
 
                             },1000);
                         } else {
