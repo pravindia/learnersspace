@@ -4,6 +4,7 @@ body {
     overflow-x: hidden;
     /* color: #fff; */
 }
+
 [class*="col-"] {
     margin-bottom: 5px;
 }
@@ -76,7 +77,8 @@ body {
 }
 .highlights_desc{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 300;
 }
 .contact{
     margin-top: 20px;
@@ -170,3 +172,17 @@ body {
         font-size: 65px;
     }
   }
+.grad{
+    background: linear-gradient(to bottom right, #02B4E3, #02CBBA);
+    padding: 40px;
+}
+.grad h2{
+    /* color: #070bff; */
+    font-weight: 400;
+}
+h2{
+    font-family: 'Lato', sans-serif;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+}
