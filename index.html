@@ -141,7 +141,7 @@
                     </div>
                     <div class="tab-pane fade" id="v-pills-language" role="tabpanel" aria-labelledby="v-pills-language-tab">
                         <br>
-                        <p>We Teach German , Japanese , Spainish , Ita;ly </p>
+                        <p>We Teach German , Japanese , Spanish , Italian </p>
                         <p>Activities and Assignements to make Language Easy</p>
                         <p>Love to Speak Initative to Make Students Teach others</p>
                         <p>Focusing to Clear Exams like TOEFL | GRE | IELTS </p>
@@ -178,11 +178,23 @@
                     <form method="post" id="student_lead_form" data-toggle="validator">
                         <div class="form-group">
                             <label for="student_name" class="control-label">Name</label>
-                            <input type="text" name="student_name" class="form-control" id="student_name" placeholder="Student Name" required>
+                            <input type="text" name="student_name" class="form-control" id="student_name" placeholder="Name" required>
                         </div>
                         <div class="form-group">
                             <label for="student_number" class="control-label">Contact</label>
-                            <input type="text" name="student_number" class="form-control" id="student_number" placeholder="Student Number" required>
+                            <input type="text" name="student_number" class="form-control" id="student_number" placeholder="Contact Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="student_location" class="control-label">Place of Stay 
+                                <br>( Area Name and City  ) :</label>
+                            <input type="text" name="student_location" class="form-control" id="student_location" placeholder="Place of Stay"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="student_choice_of_subject" class="control-label">Subjects / Languages
+                                <br>( Mention the subjects for which you need tutor  ) :</label>
+                            <input type="text" name="student_choice_of_subject" class="form-control" id="student_choice_of_subject" placeholder="Subjects Coaching Needed"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="student_desigination" class="control-label">Current Education
@@ -190,6 +202,14 @@
                             <input type="text" name="student_desigination" class="form-control" id="student_desigination" placeholder="Student Desigination"
                                 required>
                         </div>
+                        <div class="form-group">
+                            <label for="student_choice_of_training">Mode of Training</label>
+                            <select class="form-control" id="student_choice_of_training">
+                              <option>Home Tution</option>
+                              <option>Learning at Tutor's Home</option>
+                              <option>Institution</option>
+                            </select>
+                          </div>
                         <button id="submit" class="btn btn-primary">Submit</button>
 
                     </form>
@@ -331,11 +351,16 @@
 
                         var stud_name = $('#student_name').val();
                         var stud_number = $('#student_number').val();
+                        var stud_location = $('#student_location').val();
+                        var stud_subject = $('#student_choice_of_subject').val();
+                        var stud_training = $('#student_choice_of_training').val();
                         var stud_desgination = $('#student_desigination').val();
 
                         dataSet = "{\n\t\"stud_name\":\"" + stud_name + "\",\n\t\"stud_number\":\"" +
-                            stud_number + "\",\n\t\"stud_desigination\":\"" + stud_desgination +
-                            "\"\n}";
+                            stud_number + "\",\n\t\"stud_location\":\"" +
+                            stud_location + "\",\n\t\"stud_subject\":\"" +
+                            stud_subject + "\",\n\t\"stud_training\":\"" +
+                            stud_training + "\",\n\t\"stud_desigination\":\"" + stud_desgination +"\"\n}";
                         $('#submit').html('Please Wait .....');
                         $.ajax({
 
