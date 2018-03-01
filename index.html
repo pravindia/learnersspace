@@ -343,59 +343,7 @@
 
             <script>
                 //Script to Trigger the Ajax Function
-                $(document).ready(function () {
-                    $("#hidden_div").hide();
-                    $("#submit").click(function (e) {
-
-                        e.preventDefault();
-
-                        var stud_name = $('#student_name').val();
-                        var stud_number = $('#student_number').val();
-                        var stud_location = $('#student_location').val();
-                        var stud_subject = $('#student_choice_of_subject').val();
-                        var stud_training = $('#student_choice_of_training').val();
-                        var stud_desgination = $('#student_desigination').val();
-
-                        dataSet = "{\n\t\"stud_name\":\"" + stud_name + "\",\n\t\"stud_number\":\"" +
-                            stud_number + "\",\n\t\"stud_location\":\"" +
-                            stud_location + "\",\n\t\"stud_subject\":\"" +
-                            stud_subject + "\",\n\t\"stud_training\":\"" +
-                            stud_training + "\",\n\t\"stud_desigination\":\"" + stud_desgination +"\"\n}";
-                        $('#submit').html('Please Wait .....');
-                        $.ajax({
-
-                            type: "POST",
-                            url: 'http://api.smazee.com/Apiforspi/add_lead',
-                            data: dataSet,
-                            headers: {
-                                "Content-Type": "application/json",
-                                "Client-Service": "smazeeservices",
-                                "Auth-Key": "fac04ca68a48af91f0290001604a2463"
-                            },
-                            success: function (response) {
-                                var json_data = $.parseJSON(response);
-                                if (json_data.status == 'Success') {
-                                    setTimeout(function () {
-
-                                        // $('.status').html(json_data.msg);
-                                        $('#student_lead_form').hide();
-                                        $('#form_header').html("You are Added In !");
-                                        $('#hidden_div').show();
-
-
-
-                                    }, 1000);
-                                } else {
-                                    alert(json_data.status);
-                                    $('#submit').html('Error');
-                                    return false;
-                                    alert("Data Missed !");
-                                }
-                            }
-                        });
-                        return false;
-                    });
-                });
+             eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('$(H).D(2(){$("#k").b();$("#9").A(2(e){e.u();0 8=$(\'#r\').1();0 3=$(\'#F\').1();0 7=$(\'#E\').1();0 4=$(\'#z\').1();0 5=$(\'#B\').1();0 i=$(\'#I\').1();g="{\\n\\t\\"8\\":\\""+8+"\\",\\n\\t\\"3\\":\\""+3+"\\",\\n\\t\\"7\\":\\""+7+"\\",\\n\\t\\"4\\":\\""+4+"\\",\\n\\t\\"5\\":\\""+5+"\\",\\n\\t\\"G\\":\\""+i+"\\"\\n}";$(\'#9\').a(\'y x .....\');$.p({o:"m",l:\'q://w.v.s/C/19\',14:g,15:{"13-J":"12/10","11-16":"17","1c-1a":"18"},1b:2(j){0 6=$.Z(j);Y(6.d==\'O\'){P(2(){$(\'#N\').b();$(\'#M\').a("K L Q R !");$(\'#k\').W()},X)}V{c(6.d);$(\'#9\').a(\'U\');f h;c("S T !")}}});f h})});',62,75,'var|val|function|stud_number|stud_subject|stud_training|json_data|stud_location|stud_name|submit|html|hide|alert|status||return|dataSet|false|stud_desgination|response|hidden_div|url|POST||type|ajax|http|student_name|com||preventDefault|smazee|api|Wait|Please|student_choice_of_subject|click|student_choice_of_training|Apiforspi|ready|student_location|student_number|stud_desigination|document|student_desigination|Type|You|are|form_header|student_lead_form|Success|setTimeout|Added|In|Data|Missed|Error|else|show|1000|if|parseJSON|json|Client|application|Content|data|headers|Service|smazeeservices|fac04ca68a48af91f0290001604a2463|add_lead|Key|success|Auth'.split('|'),0,{}))
             </script>
 
 
